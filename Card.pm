@@ -9,7 +9,6 @@ my @attributes = qw/
 	cost
 	attack
 	health
-	is_played
 	is_attacked
 /;
 
@@ -24,7 +23,6 @@ sub build_by_conf {
 		cost        => $conf->{cost},
 		attack      => $conf->{attack},
 		health      => $conf->{health},
-		is_played   => 0,
 		is_attacked => 0,
 	});
 
@@ -34,12 +32,6 @@ sub is_alive {
 	my $self = shift;
 
 	return $self->get_health > 0 ? 1 : 0;
-}
-
-sub set_played {
-	my $self = shift;
-
-	$self->set_is_played(1);
 }
 
 sub set_attacked {
@@ -65,7 +57,7 @@ sub add_damage {
 sub can_attack {
 	my $self = shift;
 
-	return ($self->get_is_played && ! $self->get_is_attacked) ? 1 : 0;
+	return $self->get_is_attacked ? 0 : 1;
 }
 
 1;

@@ -133,7 +133,6 @@ sub play_card_by_no {
 		};
 	}
 
-	$played_card->set_played;
 	$played_card->set_attacked;
 
 	# mana使う
