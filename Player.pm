@@ -126,15 +126,15 @@ sub play_card_by_no {
 	# no - 1 番目から 1枚取る
 	my $played_card = splice(@{$self->get_hand}, $no - 1, 1);
 
-	$played_card->set_played;
-	$played_card->set_attacked;
-
 	if ($played_card->get_cost > $self->usable_mana) {
 		return +{
 			has_error => 1,
 			message   => "not enough mana",
 		};
 	}
+
+	$played_card->set_played;
+	$played_card->set_attacked;
 
 	# mana使う
 	$self->use_mana_by_cost($played_card->get_cost);
