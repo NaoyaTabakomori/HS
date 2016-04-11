@@ -178,9 +178,9 @@ sub attack {
 		$player->cleanup_field;
 		$opponent->cleanup_field;
 
-		# 攻撃済みにする
-		$attack_card->set_attacked;
 	}
+	# 攻撃済みにする
+	$attack_card->set_attacked;
 
 }
 
