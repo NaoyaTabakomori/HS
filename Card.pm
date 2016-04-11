@@ -65,7 +65,7 @@ sub add_damage {
 sub can_attack {
 	my $self = shift;
 
-	return ($self->is_played && ! $self->is_attacked) ? 1 : 0;
+	return ($self->get_is_played && ! $self->get_is_attacked) ? 1 : 0;
 }
 
 1;
