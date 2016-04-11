@@ -171,7 +171,7 @@ sub attack {
 		my $fuga = $defense_card->get_attack;
 
 		# お互いに攻撃
-		$attack_card->add_damage($attack_card->get_attack);
+		$defense_card->add_damage($attack_card->get_attack);
 		$attack_card->add_damage($defense_card->get_attack);
 
 		# 掃除
