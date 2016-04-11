@@ -21,6 +21,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 3,
 			attack => 3,
 			health => 3,
+			charge => 1,
 		},
 		+{
 			cost   => 1,
@@ -46,6 +47,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 2,
 			attack => 2,
 			health => 1,
+			charge => 1,
 		},
 		+{
 			cost   => 3,
@@ -56,6 +58,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 1,
 			attack => 2,
 			health => 3,
+			charge => 1,
 		},
 		+{
 			cost   => 2,
@@ -86,6 +89,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 2,
 			attack => 3,
 			health => 2,
+			charge => 1,
 		},
 		+{
 			cost   => 2,
@@ -96,6 +100,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 2,
 			attack => 3,
 			health => 1,
+			charge => 1,
 		},
 				+{
 			cost   => 3,
@@ -111,6 +116,7 @@ sub DEFAULT_DECK_SEED {
 			cost   => 4,
 			attack => 3,
 			health => 5,
+			charge => 1,
 		},
 		+{
 			cost   => 4,

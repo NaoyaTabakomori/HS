@@ -133,7 +133,7 @@ sub play_card_by_no {
 		};
 	}
 
-	$played_card->set_attacked;
+	$played_card->set_attacked unless ($played_card->has_charge);
 
 	# mana使う
 	$self->use_mana_by_cost($played_card->get_cost);

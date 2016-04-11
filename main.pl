@@ -208,11 +208,15 @@ sub dump_information_by_player {
 			my $cost   = $hand_card->get_cost;
 			my $attack = $hand_card->get_attack;
 			my $health = $hand_card->get_health;
+			my $has_charge = $hand_card->has_charge;
 			print "===.\n";
 			print "no: ${no}.\n";
 			print "cost: ${cost}.\n";
 			print "attack: ${attack}.\n";
 			print "health: ${health}.\n";
+			if ($has_charge) {
+				print "has charge.\n";
+			}
 			$no++;
 		}
 	}

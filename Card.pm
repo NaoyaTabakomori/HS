@@ -9,6 +9,7 @@ my @attributes = qw/
 	cost
 	attack
 	health
+	charge
 	is_attacked
 /;
 
@@ -23,6 +24,7 @@ sub build_by_conf {
 		cost        => $conf->{cost},
 		attack      => $conf->{attack},
 		health      => $conf->{health},
+		charge      => $conf->{charge} || 0,
 		is_attacked => 0,
 	});
 
@@ -44,6 +46,12 @@ sub set_no_attacked {
 	my $self = shift;
 
 	$self->set_is_attacked(0);
+}
+
+sub has_charge {
+	my $self = shift;
+
+	$self->get_charge ? 1 : 0;
 }
 
 sub add_damage {
